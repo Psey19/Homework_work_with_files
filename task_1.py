@@ -37,14 +37,6 @@ def read_file(file_name):
         f_r = DictReader(data)
         return list(f_r)
     
-def write_new_file(file_2, lst):
-    res = read_file(file_name)
-    res.append(obj)
-    with open(file_2, 'w', encoding='utf-8', newline='') as data:
-        f_w = DictWriter(data, fieldnames=['имя', 'фамилия', 'телефон'])
-        f_w.writeheader()
-        f_w.writerows(res)
-
 def write_file(file_name, lst):
     res = read_file(file_name)
     obj = {'имя': lst[0], 'фамилия': lst[1], 'телефон': lst[2]}
